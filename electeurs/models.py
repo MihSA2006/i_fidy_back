@@ -8,7 +8,6 @@ class Region(models.Model):
     def __str__(self):
         return self.nom_region
 
-
 class District(models.Model):
     id_district = models.AutoField(primary_key=True)
     nom_district = models.CharField(max_length=100)
@@ -20,7 +19,6 @@ class District(models.Model):
     def __str__(self):
         return self.nom_district
 
-
 class Commune(models.Model):
     id_commune = models.AutoField(primary_key=True)
     nom_commune = models.CharField(max_length=100)
@@ -31,7 +29,6 @@ class Commune(models.Model):
 
     def __str__(self):
         return self.nom_commune
-
 
 class Fokontany(models.Model):
     id_fokontany = models.AutoField(primary_key=True)
@@ -52,7 +49,6 @@ class Fokontany(models.Model):
     def decrement_electeurs(self):
         self.nb_electeur_inscrit = models.F('nb_electeur_inscrit') - 1
         self.save(update_fields=['nb_electeur_inscrit'])
-
 
 class Electeur(models.Model):
     id = models.AutoField(primary_key=True)
