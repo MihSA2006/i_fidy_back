@@ -3,16 +3,16 @@ from .models import Region, District, Commune, Fokontany, Electeur
 from .serializers import *
 
 class RegionViewSet(viewsets.ModelViewSet):
-    queryset = Region.objects.all()
+    queryset = Region.objects.all().order_by('id_region')
     serializer_class = RegionSerializer
 class DistrictViewSet(viewsets.ModelViewSet):
-    queryset = District.objects.all()
+    queryset = District.objects.all().order_by('id_district')
     serializer_class = DistrictSerializer
 class CommuneViewSet(viewsets.ModelViewSet):
-    queryset = Commune.objects.all()
+    queryset = Commune.objects.all().order_by('id_commune')
     serializer_class = CommuneSerializer
 class FokontanyViewSet(viewsets.ModelViewSet):
-    queryset = Fokontany.objects.all()
+    queryset = Fokontany.objects.all().order_by('id_fokontany')
     serializer_class = FokontanySerializer
 class ElecteurViewSet(viewsets.ModelViewSet):
     queryset = Electeur.objects.all()

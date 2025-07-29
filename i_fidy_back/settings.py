@@ -35,6 +35,7 @@ INSTALLED_APPS = [
     'corsheaders',
     'django_filters',
     'electeurs',
+    'elections',
 ]
 
 # Configuration de Django REST Framework
