@@ -8,6 +8,7 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('api/', include('electeurs.urls')),
     path('api/elections/', include('elections.urls')),
+    path('api/accounts/', include('accounts.urls')),
 ]
 
 # Pour servir les fichiers médias en développement
